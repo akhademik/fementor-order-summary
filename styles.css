@@ -12,6 +12,8 @@
   --clr-desaturated-blue: hsl(224, 23%, 55%);
   --clr-dark-blue: hsl(223, 47%, 23%);
 
+  --clr-btn-hover: hsl(245, 83%, 68%);
+
   font-size: 16px;
 }
 body {
@@ -97,6 +99,11 @@ p a {
   font-weight: 900;
   font-size: 0.85rem;
 }
+p a:hover,
+p a:focus {
+  color: var(--clr-btn-hover);
+  text-decoration: none;
+}
 .payment {
   display: flex;
   flex-direction: column;
@@ -115,10 +122,21 @@ p a {
   font-family: inherit;
   border: 1px solid transparent;
   box-shadow: 0px 15px 10px var(--clr-pale-blue);
+  cursor: pointer;
 }
+.payment .btn:hover,
+.payment .btn:focus {
+  background-color: var(--clr-btn-hover);
+  box-shadow: var(#766cf1);
+}
+
 .cancel {
   margin-bottom: 3rem;
   text-decoration: none;
   font-weight: 900;
   color: var(--clr-desaturated-blue);
+}
+.cancel:hover,
+.cancel:focus {
+  color: var(--clr-dark-blue);
 }
